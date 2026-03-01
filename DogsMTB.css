@@ -329,7 +329,7 @@ overflow: hidden;
   position: absolute;
   bottom: 0;
   text-align: center;
-
+  font-size: clamp(.7rem, 2vw, 1.5em);
 }
 .main-content .main-paragraph .column-pic .gallery-pics .thumbnails .pic-words-small{
   width: 100%;
@@ -339,7 +339,10 @@ overflow: hidden;
   position: absolute;
   bottom: 0;
   text-align: center;
+  font-size: clamp(.7rem, 2vw, 1.5em);
 }
+
+
 .color-this{
   color: var(--primary-color);
 }
