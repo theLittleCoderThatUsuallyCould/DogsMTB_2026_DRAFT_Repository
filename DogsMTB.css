@@ -53,7 +53,7 @@ img{
   text-align: left;
   transition: .3s ease;
   overflow: auto;
-  font-size: calc(1px + 0.5vw);
+  z-index: 999;
 }
 .off-screen-menu .dropdown{
   top:100px;
@@ -62,18 +62,19 @@ img{
 }
 .off-screen-menu ul li{
   margin-top: .5em;
+  margin-right: 10px;
   :hover{
     color: var(--tertiary-color);
   }
 }
 .off-screen-menu ul li a{
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
   color: var(--primary-color);
 }
 
 .off-screen-menu ul li a img{
-  max-width: 200px;
-  max-height: 50px;
+  width: auto;
+  height: clamp(1.5rem, 5vw, 2.5rem);
   padding-right: 10px;
 }
 /*
@@ -93,7 +94,7 @@ padding-left:50px;
   padding:1rem;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .navbar .container{
@@ -212,7 +213,7 @@ padding-left:50px;
   width: 100%;
   background: black;
   color: white;
-  font-size: 2em;
+  font-size: clamp(1.4rem, 5vw, 2.8rem);
   padding-bottom: 1em;
 }
 
@@ -224,15 +225,15 @@ padding-left:50px;
 .main-content .main-paragraph .main-text h1,
 .main-content .main-paragraph h1,
 .main-content .main-paragraph .column-text h1{
-  font-size: 3.5em;
+  font-size: clamp(1.5rem, 6vw, 3rem);
 }
 .main-body-text h2,
 .main-content .main-paragraph .main-text h2{
-  font-size: 3em;
+  font-size: clamp(1.4rem, 5vw, 2.8rem);
   margin: 1.5em;
 }
 .main-body-text h3{
-  font-size: 2em;
+  font-size: clamp(1.3rem, 4vw, 2.7rem);
 }
 
 .main-body-text img{
@@ -240,12 +241,14 @@ padding-left:50px;
   max-height: 10em;
   background: white;
 }
+.main-text, .column-text,
 .main-body-text .main-text,
 .main-body-text .main-text .list-need-justified,
 .main-content .main-paragraph .main-text,
 .main-content .main-paragraph .column-text .main-text .main-text,
 .main-content .main-body-text .main-paragraph .column-text .main-text .list-need-justified {
-  font-size: 1.5em;
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  font-weight: normal;
 }
 
 .main-body-text .main-paragraph .column-text .list-need-justified,
@@ -253,7 +256,7 @@ padding-left:50px;
   align-self: center;
   justify-self: center;
   text-align: start;
-  font-size: 1.5em;
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
 }
 .gear-list{
   text-align: start;
@@ -372,7 +375,7 @@ overflow: hidden;
   border: none;
   width: 100%;
   text-align: left;
-  font-size: 2em;
+  font-size: clamp(1.5rem, 6vw, 3rem);
   font-weight: 600;
   color: var(--dark-color-light);
   cursor: pointer;
@@ -391,8 +394,8 @@ overflow: hidden;
 .faq-answer {
   padding: 10px;
   background: white;
-  font-size: 1.8em;
-  font-weight: 500;
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  font-weight: normal;
   color: var(--dark-color-light);
   display: none;
   text-align: left;
