@@ -40,11 +40,11 @@ img{
   height: 100vh;
   width: 100%;
 /*  max-width: 350px;
+  min-height: fit-content;
   min-height:  850px;*/
   max-width: fit-content;
-  min-height: fit-content;
   position: fixed;
-  top: 0;
+  top: clamp(1.5rem, 3vw, 2.5rem);
   left: -450px;
   display: flex;
   flex-direction: column;
@@ -52,12 +52,26 @@ img{
   justify-content: center;
   text-align: left;
   transition: .3s ease;
-  overflow: auto;
-  z-index: 999;
+  overflow-y: auto;
+  z-index: 900;
+  vertical-align: top;
 }
+@media screen and (max-height: 780px) {
+  .off-screen-menu, .dropdown {
+    height: 80vh;
+    top: 11vw;
+  }
+}/*
+@media screen and (max-height: 767px) {
+  .off-screen-menu, .dropdown {
+    height: 90vh;
+    top: 5vw;
+    background:pink
+  }
+}*/
 .off-screen-menu .dropdown{
-  top:100px;
-  margin-top: 100px;
+  top:clamp(1.5rem, 5vw, 2.5rem);
+  margin-top: clamp(1.5rem, 5vw, 2.5rem);
   padding-bottom: 10px;
 }
 .off-screen-menu ul li{
@@ -80,11 +94,11 @@ img{
 /*
 #fb {
 padding-left:50px;
-}
+}*/
 #instagram{
-  padding-left: 10px;
+  padding-left: clamp(1.5rem, 5vw, 2.5rem);
 }
-*/
+
 .off-screen-menu.active {
   left: 0;
 }
@@ -200,8 +214,10 @@ padding-left:50px;
 }
 
 .main-body .team-pic{
-  border: black 1em solid;
+ /* border: black 1em solid;*/
   display: flex;
+  border: black 6px solid;
+  border-radius: 2px;
 }
 
 .main-body .row{
@@ -213,29 +229,45 @@ padding-left:50px;
   width: 100%;
   background: black;
   color: white;
-  font-size: clamp(1.4rem, 5vw, 2.8rem);
-  padding-bottom: 1em;
+  font-size: clamp(1rem, 2vw, 2rem);
+  padding-bottom: .35em;
 }
 
 .main-body-text{
   margin-top: 50px;
   margin-bottom: 50px;
 }
+h1,
 .main-body-text h1,
 .main-content .main-paragraph .main-text h1,
 .main-content .main-paragraph h1,
 .main-content .main-paragraph .column-text h1{
   font-size: clamp(1.5rem, 6vw, 3rem);
+  margin: 1.5em;
 }
+h2,
 .main-body-text h2,
 .main-content .main-paragraph .main-text h2{
   font-size: clamp(1.4rem, 5vw, 2.8rem);
-  margin: 1.5em;
+  margin: 1.3em;
 }
+h3,
 .main-body-text h3{
   font-size: clamp(1.3rem, 4vw, 2.7rem);
+  margin: .2em 0 .2em 0;
+}
+h4{
+  font-size: clamp(1.15rem, 3.7vw, 2.3rem);
+  margin: .2em 0 .2em 0;
+}
+hr {
+  margin: 1em 0 .5em 0;
 }
 
+.bike-as-bullet{
+  max-width: clamp(1.5rem, 6vw, 3rem);
+  max-height: clamp(1.3rem, 4vw, 2.7rem);
+}
 .main-body-text img{
   max-width:10em;
   max-height: 10em;
@@ -250,7 +282,7 @@ padding-left:50px;
   font-size: clamp(1.2rem, 3vw, 2.5rem);
   font-weight: normal;
 }
-
+.list-need-justified,
 .main-body-text .main-paragraph .column-text .list-need-justified,
 .main-content .main-body-text .main-paragraph .column-text .main-text .list-need-justified{
   align-self: center;
@@ -415,9 +447,12 @@ overflow: hidden;
 .footer{
   width: 100%;
   background-color: var(--primary-color);
-  padding:20px;
+  padding:10px;
   text-align: center;
   font-size: 1.8em;
+}
+.footer-container{
+  font-size: clamp(1rem, 2vw, 2rem) ;
 }
 
 
@@ -426,17 +461,17 @@ overflow: hidden;
 .btn, .button-link{
   display: inline-grid;
   font-family: "Roboto Slab",  serif;
-  padding: .6em .6em;
+  padding: 10px 10px;
   background: #000000;
   color: #ffffff;
   font-weight: 600;
-  font-size: .8em;
+  font-size:  clamp(1.15rem, 1.7vw, 2rem);
   text-decoration: none;
-
+  min-width: 250px;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.5s;
-  margin: 2% 2% 2% 2%;
+  margin: 0 10px 10px 10px ;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 .btn:hover, .button-link:hover{
