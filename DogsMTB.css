@@ -229,7 +229,7 @@ padding-left:50px;
   width: 100%;
   background: black;
   color: white;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1.5rem, 6vw, 3rem);
   padding-bottom: .35em;
 }
 
@@ -363,19 +363,8 @@ overflow: hidden;
   padding-bottom: 20px;
   margin-bottom: 30px;
 }
-.main-content .main-paragraph .column-pic .coaches-pics .coaches .pic-words-small,
-.main-content .main-paragraph .column-pic .captains-pics .captains .pic-words-small{
 
-  width: 100%;
-  background: black;
-  color: white;
-  padding-top:10px;
-  padding-bottom: 1em;
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  font-size: clamp(.7rem, 2vw, 1.5em);
-}
+.pic-words-small,
 .main-content .main-paragraph .column-pic .gallery-pics .thumbnails .pic-words-small{
   width: 100%;
   background: black;
@@ -384,7 +373,7 @@ overflow: hidden;
   position: absolute;
   bottom: 0;
   text-align: center;
-  font-size: clamp(.7rem, 2vw, 1.5em);
+  font-size: clamp(.8rem, 2vw, 1.5em);
 }
 
 
