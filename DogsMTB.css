@@ -56,7 +56,7 @@ img{
   z-index: 900;
   vertical-align: top;
 }
-@media screen and (max-height: 780px) {
+@media screen and (max-height: 450px) {
   .off-screen-menu, .dropdown {
     height: 80vh;
     top: 11vw;
@@ -91,10 +91,7 @@ img{
   height: clamp(1.5rem, 5vw, 2.5rem);
   padding-right: 10px;
 }
-/*
-#fb {
-padding-left:50px;
-}*/
+
 #instagram{
   padding-left: clamp(1.5rem, 5vw, 2.5rem);
 }
@@ -466,21 +463,3 @@ overflow: hidden;
 .btn:hover, .button-link:hover{
   color: var(--tertiary-color);
 }
-
-
-
-/*
-@media screen and( max-width: 600px){
-  #nav-logo {
-    display: flex;
-  }
-  .navbar .container .main-menu-lg{
-    display: none;
-  }
-}
-@media screen and ( min-width: 990px){
-  .navbar .container .main-menu-lg{
-    display: none;
-  }
-}
-*/
