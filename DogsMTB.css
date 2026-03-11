@@ -161,11 +161,9 @@ img{
   max-height:80px;
   place-self: end;
   margin-right: 20%;
-  background-color:white ;
-  border-radius: 3px;
 }
 #nav-logo:hover{
-  background-color: var(--tertiary-color);
+  opacity: 50%;
 }
 /*END OF NAV*/
 
@@ -216,7 +214,7 @@ img{
   width: 100%;
   background: black;
   color: white;
-  font-size: clamp(1.5rem, 6vw, 3rem);
+  font-size: clamp(1.5rem, 5vw, 3rem);
   padding-bottom: .35em;
 }
 
